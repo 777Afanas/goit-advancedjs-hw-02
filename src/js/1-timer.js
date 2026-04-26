@@ -1,5 +1,10 @@
 import flatpickr from 'flatpickr';
+import iziToast from 'izitoast';
+
 import 'flatpickr/dist/flatpickr.min.css';
+import 'izitoast/dist/css/iziToast.min.css';
+
+console.dir(iziToast);
 
 const timer = {
   intervalId: null,
@@ -33,7 +38,13 @@ const timer = {
 
   handleDateSelection(date) {
     if (date < Date.now()) {
-      alert('Please choose a date in the future');
+      // alert('Please choose a date in the future');
+      iziToast.warning({
+        title: 'Warning',
+        message: 'Please choose a date in the future',
+        position: 'topCenter',
+      });
+
       this.refs.startBtn.disabled = true;
       return;
     }
