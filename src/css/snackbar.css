@@ -1,0 +1,115 @@
+
+/* Основные настройки формы (добавлена тень, изменен фон) */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 360px;
+    padding: 24px;
+    /* Увеличили отступы */
+    font-family: sans-serif;
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* Скруглили углы всей формы */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Легкая тень */
+}
+
+/* Стили для текстовой метки "Delay (ms)" */
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+    color: #2e2f42;
+    /* Более темный цвет текста */
+}
+
+/* Настройка поля ввода числа (изменен border) */
+.form input[type="number"] {
+    padding: 12px;
+    /* Увеличили внутренние отступы */
+    border: 1px solid #757575;
+    /* Более мягкий серый */
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 250ms ease;
+}
+
+/* Эффект при клике на поле ввода (Синяя подсветка) */
+.form input[type="number"]:focus {
+    border-color: #4e75ff;
+    /* Синий цвет Material */
+}
+
+/* Настройка рамки State (fieldset) */
+fieldset {
+    border: 1px solid #757575;
+    border-radius: 4px;
+    padding: 16px 20px;
+    display: flex;
+    gap: 24px;
+    /* Расстояние между радио-кнопками */
+}
+
+/* Стили заголовка внутри рамки */
+legend {
+    padding: 0 4px;
+    font-size: 16px;
+    /* Увеличили шрифт */
+    color: #2e2f42;
+}
+
+/* Располагаем радио-кнопки и текст в одну линию */
+fieldset label {
+    flex-direction: row !important;
+    /* Принудительно в ряд */
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Изменяем размер самого кружочка радиокнопки */
+fieldset input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Стилизация синей кнопки Create notification */
+button[type="submit"] {
+    padding: 12px;
+    background-color: #4e75ff;
+    /* Синий цвет Material */
+    color: #ffffff;
+    /* Белый текст */
+    border: none;
+    /* Убрали стандартную рамку */
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    /* Сделали текст чуть толще */
+    text-transform: uppercase;
+    /* Все заглавные (как в Material) */
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    /* Тень у кнопки */
+    transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+/* Эффекты наведения для кнопки */
+button[type="submit"]:hover {
+    background-color: #6c8cff;
+    /* Светло-синий при наведении */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект нажатия (активное состояние) */
+button[type="submit"]:active {
+    background-color: #3b61ff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+

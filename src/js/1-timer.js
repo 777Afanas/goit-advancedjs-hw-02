@@ -4,8 +4,6 @@ import iziToast from 'izitoast';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
 
-console.dir(iziToast);
-
 const timer = {
   intervalId: null,
   selectedDate: null,
